@@ -1,5 +1,18 @@
 import { useState } from "react";
 
+/**
+ * Custom React hook to copy a given URL to the clipboard and manage copy state.
+ *
+ * This hook provides a function to copy the provided `shortenedUrl` to the clipboard,
+ * sets a flag indicating whether the copy was successful, and resets the flag after
+ * a specified timeout. It uses the Clipboard API and falls back to a legacy method if needed.
+ *
+ * @param resetTimeMs - The time in milliseconds after which the `isCopied` state resets to `false`.
+ * @param shortenedUrl - The URL string to be copied to the clipboard.
+ * @returns An object containing:
+ *   - `isCopied`: A boolean indicating if the URL was successfully copied.
+ *   - `handleCopy`: A function to trigger the copy operation for the provided URL.
+ */
 export const useCopyToClipboard = (
   resetTimeMs: number,
   shortenedUrl: string

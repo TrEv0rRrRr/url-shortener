@@ -3,6 +3,24 @@ import isValidUrl from "../helpers/isValidUrl";
 import getShortenedUrl from "../services/getShortenedUrl";
 import type { OnUrlCountChange, ShortenedUrls } from "../types/url";
 
+/**
+ * Custom React hook for managing URL shortening functionality.
+ *
+ * This hook provides state and handlers for a URL shortener form, including:
+ * - Managing the original URL input and its validation.
+ * - Handling errors related to input and API requests.
+ * - Storing up to the last three shortened URLs.
+ * - Notifying a parent component of the current count of shortened URLs.
+ *
+ * @param onUrlCountChange - Callback invoked whenever the number of shortened URLs changes.
+ * @returns An object containing:
+ * - `inputErrorStyle`: CSS class string for styling input errors.
+ * - `handleSubmit`: Form submit handler for shortening URLs.
+ * - `handleChange`: Input change handler for updating the original URL.
+ * - `originalUrl`: Current value of the URL input field.
+ * - `error`: Current error message, if any.
+ * - `shortenedUrls`: Array of the most recent shortened URLs.
+ */
 export default function useUrlShortener(onUrlCountChange: OnUrlCountChange) {
   const [originalUrl, setOriginalUrl] = useState("");
   const [error, setError] = useState("");
