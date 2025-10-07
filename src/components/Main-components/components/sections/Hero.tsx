@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section className={`flex flex-col gap-10 relative after:absolute after:content-[''] after:w-full after:bg-text-muted/20 after:bottom-0 after:z-0 ${getAfterHeight(urlCount)}`}>
 
-      <img className="object-contain"
+      <img className="object-contain w-[120%] ml-[15%] scale-110"
         src={Illustration} alt="" aria-hidden />
       <div className="flex flex-col items-center gap-20">
         <article className="flex flex-col items-center justify-center text-center gap-7">
