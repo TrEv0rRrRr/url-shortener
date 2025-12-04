@@ -3,7 +3,7 @@ import FooterLinks from "./components/FooterLinks";
 import SocialMediaLogo from './components/ui/SocialMediaLogo';
 
 const Footer = () => {
-  return <footer className="bg-bg-dark flex flex-col items-center justify-center p-14 gap-10">
+  return <footer className="bg-bg-dark flex flex-col items-center justify-center p-14 gap-10 xl:flex-row xl:justify-around xl:items-start">
     <img src={ShortlyLogo} alt="Shortly logo" aria-hidden />
     <FooterLinks />
     <div className="flex gap-7 justify-center items-center">

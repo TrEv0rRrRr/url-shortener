@@ -2,7 +2,7 @@ import { FOOTER_LINKS } from "../../../consts/footer-links"
 
 const FooterLinks = () => {
   return (
-    <div className="flex flex-col gap-8 items-center justify-center text-center text-white">
+    <div className="flex flex-col gap-8 items-center justify-center text-center text-white xl:flex-row xl:items-start">
       {
         FOOTER_LINKS.map(({ title, links }) => {
           return (
