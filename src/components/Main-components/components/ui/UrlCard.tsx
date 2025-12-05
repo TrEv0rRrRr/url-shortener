@@ -12,7 +12,7 @@ const UrlCard = ({ originalUrl, shortenedUrl }: Props) => {
   const buttonCopiedStyle = isCopied ? "!bg-brand-dark hover:!bg-brand-dark/80" : "";
 
   return (
-    <div className="flex flex-col gap-4 items-center justify-center text-start bg-white w-full max-w-70 rounded-md p-4">
+    <div className="flex flex-col gap-4 items-center justify-center text-start bg-white w-full rounded-md p-4">
       <div className="border border-l-0 border-r-0 border-t-0 border-b-text-muted w-full pb-2">
         <p className="truncate max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
           {originalUrl}

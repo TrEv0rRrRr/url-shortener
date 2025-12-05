@@ -15,11 +15,11 @@ const UrlForm = ({ onUrlCountChange }: Props) => {
   } = useUrlShortener(onUrlCountChange);
 
   return (
-    <article className="flex flex-col items-center justify-center z-10 gap-5">
-      <form action="" onSubmit={handleSubmit} className="flex flex-col items-center justify-center gap-4 p-5 rounded-md bg-brand-dark">
-        <div className="flex flex-col items-start gap-1">
+    <article className="flex flex-col items-center justify-center gap-5">
+      <form action="" onSubmit={handleSubmit} className="flex flex-col gap-4 p-5 rounded-xl bg-brand-dark xl:w-200 xl:flex-row xl:p-10">
+        <div className="flex flex-col gap-1 w-full">
           <input
-            className={`bg-white px-3 py-2.5 rounded-md max-w-5xl ${error && inputErrorStyle}`}
+            className={`bg-white px-3 py-2.5 xl:w-full ${error && inputErrorStyle}`}
             type="text"
             placeholder="Shorten a link here..."
             value={originalUrl}
@@ -27,9 +27,9 @@ const UrlForm = ({ onUrlCountChange }: Props) => {
           />
           {error && <span className="text-error italic text-[.9rem]">{error}</span>}
         </div>
-        <Button text="Shorten It!" variant="secondary" />
+        <Button text="Shorten It!" variant="secondary" className="xl:w-35" />
       </form>
-      <div className="flex flex-col items-center justify-center max-w-5xl gap-5">
+      <div className="flex flex-col items-center justify-center w-full gap-5 xl:w-150">
         {
           shortenedUrls.map((shortenedLinks, index) =>
             <UrlCard originalUrl={shortenedLinks.originalUrl} shortenedUrl={shortenedLinks.shortenedUrl} key={index} />
